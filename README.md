@@ -29,10 +29,9 @@ Je schets bevat minimaal:
     De UI onderdelen geld, wave teller, levens, startknop en pauzeknop.
     Een legenda met symbolen of kleuren voor torens, vijanden, pad, basis en UI.
 
+![alt text]https://github.com/strddustt/TDBOjaar2/blob/main/game%20design/game%20design%20sketch.png    
 
-    ![Alt text]https://github.com/strddustt/TDBOjaar2/blob/main/game%20design/game%20design%20sketch.png
 
-    
 4. Torens
 
 Toren 1 naam, bereik, schade, unieke eigenschap.
