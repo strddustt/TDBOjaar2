@@ -102,11 +102,13 @@ Sprint 3 mechanics: andere difficulties, infinite mode, levels, toren unlock sys
 Sprint 4 mechanics: optimizing + bug fixes
 
 Sprint 5 mechanics:
+
+
 10. Inspiratie
 
 Noem een bestaande tower defense game die jou inspireert en wat je daarvan meeneemt of juist vermijdt.
 
-TDX op roblox. interesant concept omdat het aardig wat rare systemen heeft waar je omheen moet werken en je maar de mogelijkheid hebt om 6 torens mee te nemen
+TDX op roblox. interesant concept omdat het aardig wat rare systemen heeft waar je omheen moet werken en je maar de mogelijkheid hebt om 6 torens mee te nemen. ik gebruik dus ook keuze qua wat voor towers je meeneemt, en interacties tussen towers, en tussen tower en enemy die je meer strategie laat gebruiken. ik laat je meer dan 6 torens meenemen omdat je dan meer expressie hebt
 
 11. Technisch ontwerp mini
 
