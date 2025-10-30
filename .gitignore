@@ -23,6 +23,7 @@
 
 # Visual Studio Code workspace files
 .vscode/
+.vs/
 
 # Rider IDE files
 .idea/
