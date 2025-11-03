@@ -7,7 +7,7 @@ public class EnemyList : MonoBehaviour
 {
     private towerattack attack;
     private List<GameObject> enemies = new List<GameObject>();
-    public GameObject target;
+    [SerializeField] private GameObject target;
     private DetectOvertake changeTarget;
     private EnemyStats stats;
     private void Start()

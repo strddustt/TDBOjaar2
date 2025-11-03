@@ -13,11 +13,11 @@ public class CheckPlacementTrigger : MonoBehaviour
     {
         if (collision.tag == "tower")
         {
-            button.collisions.Add(collision.gameObject);
+            button.Collisions.Add(collision.gameObject);
         }
         else if (collision.tag == "placable")
         {
-            button.collisions.Add(collision.gameObject);
+            button.Collisions.Add(collision.gameObject);
         }
     }
 }

@@ -5,23 +5,22 @@ using System.Xml.Schema;
 
 public class WaveSystem : MonoBehaviour
 {
-    internal int wave;
-    internal bool wavespawner = false;
-    public static bool completed = false;
+    private int wave;
+    private bool wavespawner = false;
     private Queue<GameObject> totalenemies = new Queue<GameObject>();
     private int enemiesThisWave;
     private int enemiesLeft = 0;
     private int currentwave = 0;
     private cash Cash;
 
-    public GameObject weakestenemy;
-    public GameObject fastweakenemy;
-    public GameObject weakenemy;
-    public GameObject enemy;
-    public GameObject fastenemy;
-    public GameObject fasterenemy;
-    public GameObject strongenemy;
-    public GameObject boss1;
+    [SerializeField] private GameObject weakestenemy;
+    [SerializeField] private GameObject fastweakenemy;
+    [SerializeField] private GameObject weakenemy;
+    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject fastenemy;
+    [SerializeField] private GameObject fasterenemy;
+    [SerializeField] private GameObject strongenemy;
+    [SerializeField] private GameObject boss1;
 
     private Dictionary<string, GameObject> enemyTypes;
 
@@ -139,7 +138,6 @@ public class WaveSystem : MonoBehaviour
                 break;
             case 16:
                 yield return SpawnEnemies("strongenemy", new SpawnerState(1, 0, 1), 10);
-                completed = true;
                 break;
         }
         wave++;

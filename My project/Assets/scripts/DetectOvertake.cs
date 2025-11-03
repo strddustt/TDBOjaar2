@@ -7,8 +7,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class DetectOvertake : MonoBehaviour
 {
-    EnemyStats thisEnemy;
-    GameObject otherEnemy;
+    private EnemyStats thisEnemy;
+    private GameObject otherEnemy;
     public Action<GameObject, GameObject> switchTarget;
     private float timeToWait;
     private void Start()

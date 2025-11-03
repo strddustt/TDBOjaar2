@@ -8,8 +8,8 @@ public class Enemymovement : MonoBehaviour
 {
     [SerializeField] private GameObject listReference;
     private Transform pointHolder;
-    public Queue<Transform> points = new Queue<Transform>();
-    public float speed;
+    private Queue<Transform> points = new Queue<Transform>();
+    [SerializeField] private float speed;
     public Action reachedEnd;
     private EnemyStats stats;
 

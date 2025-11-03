@@ -11,7 +11,7 @@ public class LayerSorting : MonoBehaviour
         MainObjects,
         BackgroundObjects
     }
-    [SerializeField] layer chosenlayer;
+    [SerializeField] private layer chosenlayer;
 
     // Start is called before the first frame update
     void Start()

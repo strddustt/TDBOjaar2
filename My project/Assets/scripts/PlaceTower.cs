@@ -20,7 +20,8 @@ public class PlaceTower : MonoBehaviour
     private bool allowed = false;
     private bool firsttower = true;
 
-    public List<GameObject> collisions = new List<GameObject>();
+    [SerializeField] private List<GameObject> collisions = new List<GameObject>();
+    public List<GameObject> Collisions {  get { return collisions; } }
     private List<Component> components = new List<Component>();
     void Start()
     {
