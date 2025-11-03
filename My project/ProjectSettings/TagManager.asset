@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Tower
   - placable
+  - hitbox
   layers:
   - Default
   - TransparentFX

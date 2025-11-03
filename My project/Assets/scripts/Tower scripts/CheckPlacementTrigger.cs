@@ -11,7 +11,7 @@ public class CheckPlacementTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "tower")
+        if (collision.tag == "hitbox")
         {
             button.Collisions.Add(collision.gameObject);
         }

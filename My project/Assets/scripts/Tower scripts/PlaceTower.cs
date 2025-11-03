@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PlaceTower : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
+    private GameObject thisHitbox;
     private GameObject currentPrefab;
     private TowerStats stats;
     private cash Cash;
@@ -22,6 +23,7 @@ public class PlaceTower : MonoBehaviour
 
     [SerializeField] private List<GameObject> collisions = new List<GameObject>();
     public List<GameObject> Collisions {  get { return collisions; } }
+    private List<GameObject> stageRemoval = new List<GameObject>();
     private List<Component> components = new List<Component>();
     void Start()
     {
@@ -40,6 +42,7 @@ public class PlaceTower : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
             currentPrefab = Instantiate(prefab);
+            thisHitbox = currentPrefab.transform.Find("Hitbox").gameObject;
             DisableTower();
             placing = true;
 
@@ -73,31 +76,37 @@ public class PlaceTower : MonoBehaviour
     }
     private IEnumerator CheckPlacement()
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
         allowed = true;
         Debug.Log("checking placement");
         foreach (GameObject item in collisions)
         {
-            if (item.tag == "Tower" && item != currentPrefab)
+            if (item.CompareTag("hitbox") && item != thisHitbox)
             {
                 Debug.Log("placement disallowed");
                 allowed = false;
                 break;
             }
-            else if (item.tag == "placable")
+            else if (item.CompareTag("placable"))
             {
                 Debug.Log("maybe allowed");
             }
             else
             {
-                collisions.Remove(item);
+                stageRemoval.Add(item);
             }
-            
+
         }
+        foreach (GameObject item in stageRemoval)
+        {
+            collisions.Remove(item);
+        }
+        stageRemoval.Clear();
         if (collisions.Count > 0 & allowed == true)
         {
             Debug.Log("trying to place");
             allowed = false;
+            collisions.Clear();
             Place();
         }
     }
